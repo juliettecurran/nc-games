@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import Header from './Components/Shared/Header';
 import Navbar from './Components/Shared/Navbar';
 import Footer from './Components/Shared/Footer';
@@ -8,6 +7,7 @@ import SingleReview from './Components/ReviewByID/SingleReview';
 import CategoryList from './Components/Categories/CategoryList';
 import NewReviewForm from './Components/Post/NewReviewForm';
 import AllReviews from './Components/Reviews/AllReviews';
+import '././App.css';
 
 function App() {
   return (
