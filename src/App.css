@@ -6,18 +6,51 @@
   grid-template-areas: 'header' 'content';
   min-height: 100vh;
 }
-.Navbar {
-  background-color: rgba(152, 251, 152, 0.678);
-}
+
 .Header {
-  background-color: rgba(211, 170, 66, 0.726);
+  background-color: DarkBlue;
 }
+
+.Header h1 {
+  color: white;
+}
+
+.Header h1:hover {
+  color: goldenrod;
+}
+.Navbar {
+  background-color: teal;
+  padding: 1em;
+}
+
+.Navbar h4 {
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Navbar h4:hover {
+  background: goldenrod;
+  margin: 0;
+}
+
 .Home {
   background-color: rgba(218, 112, 214, 0.719);
 }
 .Review {
   background-color: rgba(218, 112, 214, 0.527);
 }
+
+.Footer {
+  background-color: rgba(112, 218, 213, 0.527);
+}
+
 ul {
   list-style: none;
 }

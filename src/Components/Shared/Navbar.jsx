@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className='Navbar'>
-      <h4>This is a navbar</h4>
+      <Link to='/reviews'>
+        <h4>Reviews</h4>
+      </Link>
+      <h4>Categories</h4>
+      <h4>Filter</h4>
     </nav>
   );
 };
