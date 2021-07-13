@@ -7,7 +7,9 @@ const Navbar = () => {
       <Link to='/reviews'>
         <h4>Reviews</h4>
       </Link>
-      <h4>Categories</h4>
+      <Link to='/categories'>
+        <h4>Categories</h4>
+      </Link>
       <h4>Filter</h4>
     </nav>
   );

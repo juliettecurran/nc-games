@@ -8,6 +8,7 @@ import CategoryList from './Components/Categories/CategoryList';
 import NewReviewForm from './Components/Post/NewReviewForm';
 import AllReviews from './Components/Reviews/AllReviews';
 import '././App.css';
+import Filter from './Components/Filter';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </Route>
           <Route exact path='/reviews'>
             {/*also by category? */}
+            <Filter />
             <AllReviews />
           </Route>
           <Route exact path='/reviews/:review_id'>

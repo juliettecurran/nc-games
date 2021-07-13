@@ -47,6 +47,17 @@ a {
   background-color: rgba(218, 112, 214, 0.527);
 }
 
+.Categories {
+  background-color: palevioletred;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Categories li {
+  border: 1px solid white;
+}
+
 .Footer {
   background-color: rgba(112, 218, 213, 0.527);
 }

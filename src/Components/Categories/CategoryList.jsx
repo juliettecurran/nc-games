@@ -13,8 +13,7 @@ const CategoryList = () => {
   }, []);
 
   return (
-    <div>
-      <p style={{ color: 'red' }}>I am a list of all categories</p>
+    <div className='Categories'>
       <ul>
         {categories.map((category) => {
           return (

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
+import { Link } from 'react-router-dom';
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -18,14 +19,16 @@ const AllReviews = () => {
         {reviews.map((review) => {
           return (
             <li key={review.review_id}>
-              <img
-                style={{ height: '100px' }}
-                src={review.review_img_url}
-                alt='game'
-              ></img>
-              <h3>
-                {review.title} - {review.designer}
-              </h3>
+              <Link to={`/reviews/${review.review_id}`}>
+                <img
+                  style={{ height: '100px' }}
+                  src={review.review_img_url}
+                  alt='game'
+                ></img>
+                <h3>
+                  {review.title} - {review.designer}
+                </h3>
+              </Link>
               <p>{review.owner}</p>
               <p>{review.review_body}</p> {/* Truncate body */}
               <p>{review.category}</p>

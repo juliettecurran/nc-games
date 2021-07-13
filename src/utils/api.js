@@ -4,17 +4,19 @@ const reviewsApi = axios.create({
   baseURL: 'https://ncgames-juliette.herokuapp.com/api',
 });
 
-export const getCategories = async (category) => {
-  const { data } = await reviewsApi.get('/categories');
-  return data.categories;
-};
-
-export const getReviews = async (category) => {
-  const { data } = await reviewsApi.get('/reviews', {
-    params: {
-      category: category,
-      sort_order: 'asc',
-    },
-  });
+export const getReviews = async () => {
+  const { data } = await reviewsApi.get('/reviews');
   return data.reviews;
 };
+
+export const getCategories = async () => {
+  const { data } = await reviewsApi.get('/categories');
+  console.log(data, 'DATA');
+  return data;
+};
+
+/* , {
+  params: {
+    category: category
+  },
+} */
