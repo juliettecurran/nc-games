@@ -1,26 +1,23 @@
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
-import { Link, useParams } from 'react-router-dom';
-import useReviews from '../../Hooks/useReviews';
-
-/* const AllReviews = () => {
-  const [reviews, setReviews] = useState([]);
-
-  useEffect(() => {
-    getReviews().then((reviewsFromApi) => {
-      console.log(reviewsFromApi);
-      setReviews(reviewsFromApi);
-    });
-  }, []); */
 
 const AllReviews = () => {
-  const { category } = useParams();
-  const { reviews } = useReviews(category);
+  const categoryParameter = useParams();
+  const [reviews, setReviews] = useState([]);
+
+  console.log(categoryParameter, 'categoryParameter here');
+
+  useEffect(() => {
+    getReviews(categoryParameter.category_slug).then((reviewsFromApi) => {
+      setReviews(reviewsFromApi);
+    });
+  }, [categoryParameter]);
 
   return (
     <div>
-      <h3>{category ? `${category} reviews` : `All reviews`}</h3>
-      <ul>
+      {/* <h3>{category ? `${category} reviews` : `All reviews`}</h3> */}
+      <ul className='flex-container'>
         {reviews.map((review) => {
           return (
             <li key={review.review_id}>

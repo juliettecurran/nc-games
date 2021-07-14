@@ -7,6 +7,14 @@
   min-height: 100vh;
 }
 
+svg {
+  width: 70px;
+  height: 70px;
+}
+svg:hover {
+  fill: red;
+}
+
 .Header {
   background-color: DarkBlue;
 }
@@ -52,4 +60,13 @@ a {
 
 ul {
   list-style: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 3em;
 }

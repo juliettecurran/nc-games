@@ -9,3 +9,12 @@
       <h4>Filter</h4>
     </nav> */
 }
+
+
+Issues:
+
+1) Fix display allReviews
+2) useParams from Navbar to filter allReviews
+3) Fix Filter collapse
+4) Fix layout, why you so chonk Navbar?
+

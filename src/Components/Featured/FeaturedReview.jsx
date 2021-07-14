@@ -16,11 +16,12 @@ const FeaturedReview = () => {
 
   return (
     <div>
-      <img
+      <h2>This will be a featured review</h2>
+      {/*  <img
         style={{ height: '600px' }}
         src={singleReview.review_img_url}
         alt='game'
-      ></img>
+      ></img> */}
       <h3>
         {singleReview.title} - {singleReview.designer}
       </h3>

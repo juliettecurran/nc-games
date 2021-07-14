@@ -9,14 +9,16 @@ import NewReviewForm from './Components/Post/NewReviewForm';
 import AllReviews from './Components/Reviews/AllReviews';
 import Filter from './Components/Filter/Filter';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 import '././App.css';
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState('');
   return (
     <div className='App'>
       <BrowserRouter>
         <Header />
-        <Navigation />
+        <Navigation setSelectedCategory={setSelectedCategory} />
         <Switch>
           <Route exact path='/'>
             <FeaturedReview />
@@ -24,10 +26,9 @@ function App() {
           <Route exact path='/categories'>
             <CategoryList />
           </Route>
-          <Route exact path='/reviews'>
-            {/*also by category? */}
+          <Route path='/reviews/category/:category_slug'>
             <Filter />
-            <AllReviews />
+            <AllReviews selectedCategory={selectedCategory} />
           </Route>
           <Route exact path='/reviews/:review_id'>
             {/*also by category? */}
