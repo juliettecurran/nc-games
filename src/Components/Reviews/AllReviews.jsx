@@ -2,6 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
 
+import Card from 'react-bootstrap/Card';
+
 const AllReviews = () => {
   const categoryParameter = useParams();
   const [reviews, setReviews] = useState([]);
@@ -21,19 +23,23 @@ const AllReviews = () => {
         {reviews.map((review) => {
           return (
             <li key={review.review_id}>
-              <Link to={`/reviews/${review.review_id}`}>
-                <img
-                  style={{ height: '300px' }}
-                  src={review.review_img_url}
-                  alt='game'
-                ></img>
-                <h3>
-                  {review.title} - {review.designer}
-                </h3>
-              </Link>
-              <p>by {review.owner}</p>
-              <p>Category: {review.category}</p>
-              <p>{review.votes}</p>
+              <Card style={{ width: '25rem' }} className='myCards'>
+                <Link to={`/reviews/${review.review_id}`}>
+                  <Card.Img
+                    variant='top'
+                    src={review.review_img_url}
+                    alt='game'
+                  />
+                </Link>
+                <Card.Body>
+                  <Link to={`/reviews/${review.review_id}`}>
+                    <Card.Title>{review.title}</Card.Title>
+                  </Link>
+                  <Card.Text>by {review.owner}</Card.Text>
+                  <Card.Text>Category: {review.category}</Card.Text>
+                  <Card.Text>{review.votes}</Card.Text>
+                </Card.Body>
+              </Card>
             </li>
           );
         })}

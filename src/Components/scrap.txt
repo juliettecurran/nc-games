@@ -13,8 +13,36 @@
 
 Issues:
 
-1) Fix display allReviews
-2) useParams from Navbar to filter allReviews
+
 3) Fix Filter collapse
 4) Fix layout, why you so chonk Navbar?
 
+
+<Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src="holder.js/100px180" />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
+
+<Link to={`/reviews/${review.review_id}`}>
+                <img
+                  style={{ height: '300px' }}
+                  src={review.review_img_url}
+                  alt='game'
+                ></img>
+                <h3>
+                  {review.title} - {review.designer}
+                </h3>
+              </Link>
+              <p>by {review.owner}</p>
+              <p>Category: {review.category}</p>
+              <p>{review.votes}</p>
+
+
+             

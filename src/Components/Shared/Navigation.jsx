@@ -6,49 +6,51 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navigation = () => {
   return (
-    <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
-      <Container>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='me-auto'>
-            <Nav.Link href='/reviews/category/all'>Reviews</Nav.Link>
+    <Navbar
+      collapseOnSelect
+      expand='lg'
+      className='customColour'
+      variant='dark'
+    >
+      <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar.Collapse id='responsive-navbar-nav'>
+        <Nav className='me-auto'>
+          <Nav.Link href='/reviews/category/all'>Reviews</Nav.Link>
+          <NavDropdown title='Categories' id='collasible-nav-dropdown'>
+            <NavDropdown.Item href='/reviews/category/dexterity'>
+              Dexterity
+            </NavDropdown.Item>
 
-            <NavDropdown title='Categories' id='collasible-nav-dropdown'>
-              <NavDropdown.Item href='/reviews/category/dexterity'>
-                Dexterity
-              </NavDropdown.Item>
+            <NavDropdown.Item href='/reviews/category/deck-building'>
+              Deck Building
+            </NavDropdown.Item>
+            <NavDropdown.Item href='/reviews/category/engine-building'>
+              Engine Building
+            </NavDropdown.Item>
+            <NavDropdown.Item href='/reviews/category/role-and-write'>
+              Roll And Write
+            </NavDropdown.Item>
+            <NavDropdown.Item href='/reviews/category/category/push-your-luck'>
+              Push Your Luck
+            </NavDropdown.Item>
+            <NavDropdown.Item href='/reviews/category/hidden-roles'>
+              Hidden Roles
+            </NavDropdown.Item>
+            <NavDropdown.Item href='/reviews/category/strategy'>
+              Strategy
+            </NavDropdown.Item>
 
-              <NavDropdown.Item href='/reviews/category/deck-building'>
-                Deck Building
-              </NavDropdown.Item>
-              <NavDropdown.Item href='/reviews/category/engine-building'>
-                Engine Building
-              </NavDropdown.Item>
-              <NavDropdown.Item href='/reviews/category/role-and-write'>
-                Roll And Write
-              </NavDropdown.Item>
-              <NavDropdown.Item href='/reviews/category/category/push-your-luck'>
-                Push Your Luck
-              </NavDropdown.Item>
-              <NavDropdown.Item href='/reviews/category/hidden-roles'>
-                Hidden Roles
-              </NavDropdown.Item>
-              <NavDropdown.Item href='/reviews/category/strategy'>
-                Strategy
-              </NavDropdown.Item>
-
-              <NavDropdown.Item href='/reviews/category/other'>
-                Other
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href='/reviews/category/all'>
-                All
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href='/new-review'>Submit Review</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
+            <NavDropdown.Item href='/reviews/category/other'>
+              Other
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href='/reviews/category/all'>
+              All
+            </NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link href='/new-review'>Submit Review</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
