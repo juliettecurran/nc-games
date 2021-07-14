@@ -1,21 +1,22 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './Components/Shared/Header';
-import Navbar from './Components/Shared/Navbar';
+import Navigation from './Components/Shared/Navigation';
 import Footer from './Components/Shared/Footer';
 import FeaturedReview from './Components/Featured/FeaturedReview';
 import SingleReview from './Components/ReviewByID/SingleReview';
 import CategoryList from './Components/Categories/CategoryList';
 import NewReviewForm from './Components/Post/NewReviewForm';
 import AllReviews from './Components/Reviews/AllReviews';
+import Filter from './Components/Filter/Filter';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '././App.css';
-import Filter from './Components/Filter';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
         <Header />
-        <Navbar />
+        <Navigation />
         <Switch>
           <Route exact path='/'>
             <FeaturedReview />

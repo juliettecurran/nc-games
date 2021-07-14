@@ -18,18 +18,6 @@
 .Header h1:hover {
   color: goldenrod;
 }
-.Navbar {
-  background-color: teal;
-  padding: 1em;
-}
-
-.Navbar h4 {
-  display: inline;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
 a {
   text-decoration: none;

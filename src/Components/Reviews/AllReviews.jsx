@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import useReviews from '../../Hooks/useReviews';
 
-const AllReviews = () => {
+/* const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -10,18 +11,22 @@ const AllReviews = () => {
       console.log(reviewsFromApi);
       setReviews(reviewsFromApi);
     });
-  }, []);
+  }, []); */
+
+const AllReviews = () => {
+  const { category } = useParams();
+  const { reviews } = useReviews(category);
 
   return (
     <div>
-      <p>I am all reviews</p>
+      <h3>{category ? `${category} reviews` : `All reviews`}</h3>
       <ul>
         {reviews.map((review) => {
           return (
             <li key={review.review_id}>
               <Link to={`/reviews/${review.review_id}`}>
                 <img
-                  style={{ height: '100px' }}
+                  style={{ height: '300px' }}
                   src={review.review_img_url}
                   alt='game'
                 ></img>
@@ -29,9 +34,8 @@ const AllReviews = () => {
                   {review.title} - {review.designer}
                 </h3>
               </Link>
-              <p>{review.owner}</p>
-              <p>{review.review_body}</p> {/* Truncate body */}
-              <p>{review.category}</p>
+              <p>by {review.owner}</p>
+              <p>Category: {review.category}</p>
               <p>{review.votes}</p>
             </li>
           );
