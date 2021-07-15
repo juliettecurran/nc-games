@@ -7,7 +7,6 @@ import SingleReview from './Components/ReviewByID/SingleReview';
 import CategoryList from './Components/Categories/CategoryList';
 import NewReviewForm from './Components/Post/NewReviewForm';
 import AllReviews from './Components/Reviews/AllReviews';
-import Filter from './Components/Filter/Filter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import '././App.css';

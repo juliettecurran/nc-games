@@ -1,21 +1,15 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '././navigation.css';
 
 const Navigation = () => {
   return (
-    <Navbar
-      collapseOnSelect
-      expand='lg'
-      className='customColour'
-      variant='dark'
-    >
+    <Navbar collapseOnSelect expand='lg' className='customColour'>
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
       <Navbar.Collapse id='responsive-navbar-nav'>
-        <Nav className='me-auto'>
+        <Nav className='m-auto'>
           <Nav.Link href='/reviews/category/all'>Reviews</Nav.Link>
           <NavDropdown title='Categories' id='collasible-nav-dropdown'>
             <NavDropdown.Item href='/reviews/category/dexterity'>
