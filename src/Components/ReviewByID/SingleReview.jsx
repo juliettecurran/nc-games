@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import useVote from '../../Hooks/useVote';
 import heartDice from '../../imgs/heartDice.svg';
 import { getComments } from '../../utils/api';
+import '././singleReview.css';
 
 const SingleReview = () => {
   const [singleReview, setSingleReview] = useState({});
@@ -38,7 +39,9 @@ const SingleReview = () => {
       <h3>
         {singleReview.title} - {singleReview.designer}
       </h3>
-      <p>{singleReview.owner}</p>
+      <p>
+        <span>{singleReview.owner}</span>
+      </p>
       <p className='singleReviewBody'>{singleReview.review_body}</p>
       <p>Category: {singleReview.category}</p>
       <p>{singleReview.votes}</p>
@@ -52,16 +55,18 @@ const SingleReview = () => {
           onClick={incrementVote}
         />
       </div>
-
+      <hr className='commentDivider'></hr>
       <div className='comments'>
-        <ul className='commentList'>
+        <ul className='commentsList'>
+          <h3>Comments</h3>
+          <hr className='commentDivider'></hr>
           {comments.map((comment) => {
             return (
               <li key={comment.comment_id}>
                 <p>
-                  {comment.author} - {comment.body}
+                  <span>{comment.author}</span> - {comment.body}
                 </p>
-                <p> posted at {comment.created_at}</p>
+                <p className='created_at'> posted at {comment.created_at}</p>
                 <p>{comment.votes}</p>
               </li>
             );

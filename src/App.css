@@ -75,11 +75,6 @@ Navbar {
   background-color: rgba(218, 112, 214, 0.527);
 }
 
-.singleReviewBody {
-  margin: auto;
-  width: 60%;
-}
-
 .myCards {
   background-color: white;
   border: 0.5em solid black;

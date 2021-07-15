@@ -1,0 +1,36 @@
+.singleReviewBody {
+  margin: auto;
+  width: 60%;
+}
+
+.commentDivider {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 50%;
+  background-color: black;
+  height: 1px;
+  margin-bottom: 2.4em;
+}
+
+.comments {
+  background-color: #dce5e5;
+  width: 65%;
+  padding: 3em;
+  margin-bottom: 3em;
+  margin: auto;
+}
+
+span {
+  background-color: #0e37cc;
+  padding: 0.4em;
+  color: white;
+}
+
+.createdAt {
+  font-size: 0.5em;
+}
+
+#heartDice:hover {
+  color: red;
+}
