@@ -50,45 +50,11 @@ a {
   text-decoration: none;
 }
 
-Navbar {
-  font-weight: 800;
-  color: black;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: black;
-  font-weight: 800;
-}
-
-.nav-link:hover {
-  background-color: black;
-  color: white;
-}
-
-.navbar-nav > li {
-  padding-left: 30px;
-  padding-right: 30px;
-}
 .Home {
   background-color: rgba(218, 112, 214, 0.719);
 }
 .Review {
   background-color: rgba(218, 112, 214, 0.527);
-}
-
-.myCards {
-  background-color: white;
-  border: 0.5em solid black;
-}
-
-.myCards,
-.myCards a {
-  color: black;
-}
-
-.cardTitle {
-  background-color: navy;
-  margin: 0;
-  padding: 0.2em;
 }
 
 .Categories {
@@ -105,12 +71,6 @@ Navbar {
 ul {
   list-style: none;
 }
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline;
-  margin-top: 3em;
+.voteBadge {
+  font-size: 1em;
 }

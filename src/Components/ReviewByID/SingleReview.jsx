@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useVote from '../../Hooks/useVote';
 import heartDice from '../../imgs/heartDice.svg';
+import Badge from 'react-bootstrap/Badge';
 import { getComments } from '../../utils/api';
 import '././singleReview.css';
 
@@ -30,30 +30,33 @@ const SingleReview = () => {
   }, [review_id]);
 
   return (
-    <div>
-      <img
-        style={{ height: '600px' }}
-        src={singleReview.review_img_url}
-        alt='game'
-      ></img>
-      <h3>
-        {singleReview.title} - {singleReview.designer}
-      </h3>
-      <p>
-        <span>{singleReview.owner}</span>
-      </p>
-      <p className='singleReviewBody'>{singleReview.review_body}</p>
-      <p>Category: {singleReview.category}</p>
-      <p>{singleReview.votes}</p>
-      <div>
-        <p>{vote}</p>
+    <main>
+      <div className='review'>
         <img
-          src={heartDice}
-          alt='Logo'
-          style={{ height: '40px' }}
-          id='heartDice'
-          onClick={incrementVote}
-        />
+          style={{ height: '600px' }}
+          src={singleReview.review_img_url}
+          alt='game'
+        ></img>
+        <h3>{singleReview.title}</h3>
+        <h5>{singleReview.designer}</h5>
+        <p>
+          <span>by {singleReview.owner}</span>
+        </p>
+        <p className='singleReviewBody'>{singleReview.review_body}</p>
+        <p>Category: {singleReview.category}</p>
+        <Badge className='voteBadge' pill bg='primary'>
+          {singleReview.votes}
+        </Badge>
+        <div>
+          <p>{vote}</p>
+          <img
+            src={heartDice}
+            alt='Logo'
+            style={{ height: '40px' }}
+            id='heartDice'
+            onClick={incrementVote}
+          />
+        </div>
       </div>
       <hr className='commentDivider'></hr>
       <div className='comments'>
@@ -73,7 +76,7 @@ const SingleReview = () => {
           })}
         </ul>
       </div>
-    </div>
+    </main>
   );
 };
 

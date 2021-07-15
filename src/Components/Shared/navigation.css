@@ -1,0 +1,18 @@
+Navbar {
+  font-weight: 800;
+  color: black;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: black;
+  font-weight: 800;
+}
+
+.nav-link:hover {
+  background-color: black;
+  color: white;
+}
+
+.navbar-nav > li {
+  padding-left: 30px;
+  padding-right: 30px;
+}

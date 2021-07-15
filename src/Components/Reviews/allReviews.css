@@ -1,0 +1,26 @@
+.myCards {
+  border: 0.3em solid black;
+}
+
+.myCards {
+  color: black;
+}
+.myCards a {
+  color: white;
+}
+
+.cardTitle {
+  background-color: navy;
+  color: white;
+  margin: 0;
+  padding: 0.4em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 3em;
+}

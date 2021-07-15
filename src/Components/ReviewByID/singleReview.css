@@ -31,6 +31,10 @@ span {
   font-size: 0.5em;
 }
 
-#heartDice:hover {
-  color: red;
+.icon:hover {
+  fill: red;
+}
+
+.review p {
+  line-height: 2.2em;
 }

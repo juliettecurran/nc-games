@@ -1,9 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
-
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
+import '././allReviews.css';
 
 const AllReviews = () => {
   const categoryParameter = useParams();
@@ -41,7 +41,7 @@ const AllReviews = () => {
                   <Card.Text>by {review.owner}</Card.Text>
                   <Card.Text>Category: {review.category}</Card.Text>
 
-                  <Badge pill bg='primary'>
+                  <Badge className='voteBadge' pill bg='primary'>
                     {review.votes}
                   </Badge>
                 </Card.Body>
