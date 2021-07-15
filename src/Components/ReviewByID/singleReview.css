@@ -38,3 +38,11 @@ span {
 .review p {
   line-height: 2.2em;
 }
+
+.votesBadge:hover {
+  background-color: red;
+}
+
+.userBadge {
+  font-size: 1.1em;
+}

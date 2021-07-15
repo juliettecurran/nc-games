@@ -39,24 +39,15 @@ const SingleReview = () => {
         ></img>
         <h3>{singleReview.title}</h3>
         <h5>{singleReview.designer}</h5>
-        <p>
-          <span>by {singleReview.owner}</span>
-        </p>
+
+        <Badge className='userBadge' pill bg='warning' text='dark'>
+          {singleReview.owner}
+        </Badge>
         <p className='singleReviewBody'>{singleReview.review_body}</p>
         <p>Category: {singleReview.category}</p>
-        <Badge className='voteBadge' pill bg='primary'>
-          {singleReview.votes}
+        <Badge className='voteBadge' pill bg='primary' onClick={incrementVote}>
+          {singleReview.votes + vote}
         </Badge>
-        <div>
-          <p>{vote}</p>
-          <img
-            src={heartDice}
-            alt='Logo'
-            style={{ height: '40px' }}
-            id='heartDice'
-            onClick={incrementVote}
-          />
-        </div>
       </div>
       <hr className='commentDivider'></hr>
       <div className='comments'>
@@ -67,10 +58,15 @@ const SingleReview = () => {
             return (
               <li key={comment.comment_id}>
                 <p>
-                  <span>{comment.author}</span> - {comment.body}
+                  <Badge className='userBadge' pill bg='warning' text='dark'>
+                    {comment.author}
+                  </Badge>{' '}
+                  - {comment.body}
                 </p>
                 <p className='created_at'> posted at {comment.created_at}</p>
-                <p>{comment.votes}</p>
+                <Badge className='voteBadge' pill bg='primary'>
+                  {comment.votes}
+                </Badge>
               </li>
             );
           })}

@@ -1,3 +1,11 @@
+Issues
+1) make votes increment existing vote count, also comment votes
+2) layout moving about
+3) align comments and form radio buttons
+4) how should I serve featured review? reduce instead of map?
+
+
+
 {
   /*<nav className='Navbar'>
       <Link to='/reviews'>
