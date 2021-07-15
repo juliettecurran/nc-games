@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
 
 import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
 
 const AllReviews = () => {
   const categoryParameter = useParams();
@@ -33,11 +34,16 @@ const AllReviews = () => {
                 </Link>
                 <Card.Body>
                   <Link to={`/reviews/${review.review_id}`}>
-                    <Card.Title>{review.title}</Card.Title>
+                    <Card.Title className='cardTitle'>
+                      {review.title}
+                    </Card.Title>
                   </Link>
                   <Card.Text>by {review.owner}</Card.Text>
                   <Card.Text>Category: {review.category}</Card.Text>
-                  <Card.Text>{review.votes}</Card.Text>
+
+                  <Badge pill bg='primary'>
+                    {review.votes}
+                  </Badge>
                 </Card.Body>
               </Card>
             </li>

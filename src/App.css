@@ -53,9 +53,19 @@ Navbar {
   font-weight: 800;
   color: black;
 }
+.navbar-dark .navbar-nav .nav-link {
+  color: black;
+  font-weight: 800;
+}
 
-.customColour {
-  background-color: white;
+.nav-link:hover {
+  background-color: black;
+  color: white;
+}
+
+.navbar-nav > li {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .Home {
   background-color: rgba(218, 112, 214, 0.719);
@@ -64,9 +74,27 @@ Navbar {
   background-color: rgba(218, 112, 214, 0.527);
 }
 
-.myCards {
-  border-radius: 20%;
+.singleReviewBody {
+  margin: auto;
+  width: 60%;
 }
+
+.myCards {
+  background-color: white;
+  border: 0.5em solid black;
+}
+
+.myCards,
+.myCards a {
+  color: black;
+}
+
+.cardTitle {
+  background-color: navy;
+  margin: 0;
+  padding: 0.2em;
+}
+
 .Categories {
   background-color: palevioletred;
   display: flex;

@@ -30,17 +30,19 @@ const SingleReview = () => {
         {singleReview.title} - {singleReview.designer}
       </h3>
       <p>{singleReview.owner}</p>
-      <p>{singleReview.review_body}</p> {/* Truncate body */}
+      <p className='singleReviewBody'>{singleReview.review_body}</p>
       <p>Category: {singleReview.category}</p>
       <p>{singleReview.votes}</p>
-      <p>{vote}</p>
-      <img
-        src={heartDice}
-        alt='Logo'
-        style={{ height: '40px' }}
-        id='heartDice'
-        onClick={incrementVote}
-      />
+      <div>
+        <p>{vote}</p>
+        <img
+          src={heartDice}
+          alt='Logo'
+          style={{ height: '40px' }}
+          id='heartDice'
+          onClick={incrementVote}
+        />
+      </div>
     </div>
   );
 };
