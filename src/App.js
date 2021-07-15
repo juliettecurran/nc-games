@@ -27,7 +27,6 @@ function App() {
             <CategoryList />
           </Route>
           <Route path='/reviews/category/:category_slug'>
-            <Filter />
             <AllReviews selectedCategory={selectedCategory} />
           </Route>
           <Route exact path='/reviews/:review_id'>

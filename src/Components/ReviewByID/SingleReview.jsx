@@ -4,19 +4,28 @@ import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useVote from '../../Hooks/useVote';
 import heartDice from '../../imgs/heartDice.svg';
+import { getComments } from '../../utils/api';
 
 const SingleReview = () => {
   const [singleReview, setSingleReview] = useState({});
   const { vote, incrementVote } = useVote(0);
   const { review_id } = useParams();
+  const [comments, setComments] = useState([]);
+
   useEffect(() => {
-    console.log('in useEffect for ID');
+    console.log('in useEffect for ID: single reviews');
     return axios
       .get(`https://games-juliette.herokuapp.com/api/reviews/${review_id}`)
       .then((response) => {
         console.log(response, '<-- singlereview response');
         setSingleReview(response.data.review);
       });
+  }, [review_id]);
+
+  useEffect(() => {
+    getComments(review_id).then((commentsFromApi) => {
+      setComments(commentsFromApi);
+    });
   }, [review_id]);
 
   return (
@@ -42,6 +51,22 @@ const SingleReview = () => {
           id='heartDice'
           onClick={incrementVote}
         />
+      </div>
+
+      <div className='comments'>
+        <ul className='commentList'>
+          {comments.map((comment) => {
+            return (
+              <li key={comment.comment_id}>
+                <p>
+                  {comment.author} - {comment.body}
+                </p>
+                <p> posted at {comment.created_at}</p>
+                <p>{comment.votes}</p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

@@ -27,12 +27,7 @@ const Navigation = () => {
             <NavDropdown.Item href='/reviews/category/engine-building'>
               Engine Building
             </NavDropdown.Item>
-            <NavDropdown.Item href='/reviews/category/role-and-write'>
-              Roll And Write
-            </NavDropdown.Item>
-            <NavDropdown.Item href='/reviews/category/category/push-your-luck'>
-              Push Your Luck
-            </NavDropdown.Item>
+
             <NavDropdown.Item href='/reviews/category/hidden-roles'>
               Hidden Roles
             </NavDropdown.Item>

@@ -1,7 +1,34 @@
 .postReviewForm {
   margin: auto;
-  width: 60%;
-  border: 2px solid black;
-  padding: 1em;
-  border-radius: 2%;
+  width: 50%;
+  background-color: #0e37cc;
+  padding: 1.2em;
+  padding-bottom: 4em;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5em;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 50%;
+  background-color: #ffff00;
+  height: 1px;
+  margin-bottom: 2.4em;
+}
+
+h3 {
+  padding-top: 0.5em;
+  font-weight: 600;
+}
+
+.submitBtn {
+  color: white;
+  font-weight: 600;
+}
+
+.mb-3 {
+  padding-top: 1em;
 }

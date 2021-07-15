@@ -45,4 +45,22 @@ Issues:
               <p>{review.votes}</p>
 
 
-             
+              <Form className='postReviewForm'>
+        <h3>Submit your review</h3>
+        <hr></hr>
+        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+          <Form.Label>Username</Form.Label>
+          <Form.Control type='email' placeholder='nc-gamer12' />
+        </Form.Group>
+        <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
+          <Form.Label>Your review</Form.Label>
+          <Form.Control as='textarea' rows={3} />
+        </Form.Group>
+        <Form.Group controlId='formFile' className='mb-3'>
+          <Form.Control type='file' />
+        </Form.Group>
+
+        <Button className='submitBtn' variant='primary' type='submit'>
+          Submit
+        </Button>
+      </Form>

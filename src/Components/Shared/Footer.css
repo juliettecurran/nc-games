@@ -1,0 +1,10 @@
+.Footer {
+  background-color: black;
+  max-height: 5em;
+  min-height: 5em;
+  color: white;
+}
+
+h4 {
+  margin: auto;
+}

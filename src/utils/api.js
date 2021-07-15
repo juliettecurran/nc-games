@@ -22,10 +22,8 @@ export const getCategories = async () => {
   return data;
 };
 
-/* export const getReviews = async (category) => {
-  const { data } = await gamesApi.get('/reviews', {
-    params: { category: category }
-  });
-  return data.reviews;
-};,
-} */
+export const getComments = async (review_id) => {
+  const { data } = await reviewsApi.get(`/reviews/${review_id}/comments`);
+  console.log(data.comments, 'COMMENTS');
+  return data.comments;
+};
