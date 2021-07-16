@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className='Header image-container'>
       <Link to='/'>
-        <h1 className='text'>NC-Games</h1>
+        <h1 className='text'>Gamerville</h1>
       </Link>
     </header>
   );

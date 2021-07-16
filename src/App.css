@@ -1,20 +1,30 @@
 .App {
   text-align: center;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: min-content auto;
-  grid-template-areas: 'header' 'content';
-
-  background-color: dce5e5;
+  width: 100%;
+  background-color: #e1f3f3;
   height: 100vh;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 2fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'Head'
+    'Content'
+    'Footer';
 }
 
-svg {
-  width: 70px;
-  height: 70px;
+.Head {
+  grid-area: Head;
 }
-svg:hover {
-  fill: red;
+
+.Content {
+  grid-area: Content;
+}
+
+.Footer {
+  grid-area: Footer;
 }
 
 .image-container {
@@ -50,13 +60,6 @@ a {
   text-decoration: none;
 }
 
-.Home {
-  background-color: rgba(218, 112, 214, 0.719);
-}
-.Review {
-  background-color: rgba(218, 112, 214, 0.527);
-}
-
 .Categories {
   background-color: palevioletred;
   display: flex;
@@ -69,15 +72,9 @@ a {
 }
 
 ul {
-  list-style: none;
+  padding: 0;
+  list-style-type: none;
 }
 .voteBadge {
   font-size: 1em;
-}
-
-.voteBadge:hover,
-.voteBadge:focus,
-.voteBadge:visited,
-.voteBadge:active {
-  background-color: red;
 }

@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FormControl from 'react-bootstrap/FormControl';
-import { getComments } from '../../utils/api';
+import { getComments, postComment } from '../../utils/api';
 import Expandable from '../Shared/Expandable';
 import Voter from '../Shared/Voter';
 
@@ -65,14 +65,6 @@ const SingleReview = () => {
             <hr className='commentDivider'></hr>
             <section className='commentArea'>
               <Form>
-                <Form.Group as={Row} controlId='username'>
-                  <Col sm={12} md={12}>
-                    <FormControl
-                      id='inlineFormInputGroup'
-                      placeholder='Username'
-                    />
-                  </Col>
-                </Form.Group>
                 <Form.Group as={Row} className='mb-3' controlId='review'>
                   <Col sm={12} md={12}>
                     <Form.Control as='textarea' placeholder='Your comment' />

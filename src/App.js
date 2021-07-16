@@ -16,26 +16,32 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Header />
-        <Navigation setSelectedCategory={setSelectedCategory} />
-        <Switch>
-          <Route exact path='/'>
-            <FeaturedReview />
-          </Route>
-          <Route exact path='/categories'>
-            <CategoryList />
-          </Route>
-          <Route path='/reviews/category/:category_slug'>
-            <AllReviews selectedCategory={selectedCategory} />
-          </Route>
-          <Route exact path='/reviews/:review_id'>
-            <SingleReview />
-          </Route>
-          <Route exact path='/new-review'>
-            <NewReviewForm />
-          </Route>
-        </Switch>
-        <Footer />
+        <div class='Head'>
+          <Header />
+          <Navigation setSelectedCategory={setSelectedCategory} />
+        </div>
+        <div class='Content'>
+          <Switch>
+            <Route exact path='/'>
+              <FeaturedReview />
+            </Route>
+            <Route exact path='/categories'>
+              <CategoryList />
+            </Route>
+            <Route path='/reviews/category/:category_slug'>
+              <AllReviews selectedCategory={selectedCategory} />
+            </Route>
+            <Route exact path='/reviews/:review_id'>
+              <SingleReview />
+            </Route>
+            <Route exact path='/new-review'>
+              <NewReviewForm />
+            </Route>
+          </Switch>
+        </div>
+        <div class='Footer'>
+          <Footer />
+        </div>
       </BrowserRouter>
     </div>
   );
