@@ -74,3 +74,10 @@ ul {
 .voteBadge {
   font-size: 1em;
 }
+
+.voteBadge:hover,
+.voteBadge:focus,
+.voteBadge:visited,
+.voteBadge:active {
+  background-color: red;
+}

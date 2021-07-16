@@ -60,11 +60,14 @@ span {
   background-color: red;
 }
 
-.userBadge {
+.review .userBadge {
   font-size: 1.1em;
   margin-bottom: 3em;
 }
 
+.userBadge {
+  font-size: 1em;
+}
 li {
   list-style: none;
 }
