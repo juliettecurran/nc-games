@@ -32,8 +32,9 @@ export const patchVotes = async (id, isUpvote, voteType) => {
 };
 
 export const postComment = async (reviewID, newComment) => {
-  const { data } = await reviewsApi.post(`/reviews/${reviewID}/comments`, 
-  newComment {
-    user: body,
-  });
+  const { data } = await reviewsApi.post(
+    `/reviews/${reviewID}/comments`,
+    newComment
+  );
+  return data.comment;
 };
