@@ -1,35 +1,42 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import Badge from 'react-bootstrap/Badge';
+import '../ReviewByID/singleReview.css';
 
 const FeaturedReview = () => {
   const [singleReview, setSingleReview] = useState({});
   const { review_id } = useParams();
+
   useEffect(() => {
-    console.log('in useEffect for ID');
     return axios
-      .get(`https://ncgames-juliette.herokuapp.com/api/reviews/${review_id}`)
+      .get(`https://games-juliette.herokuapp.com/api/reviews/6`)
       .then((response) => {
         setSingleReview(response.data.review);
       });
   }, [review_id]);
 
   return (
-    <div>
-      <h2>This will be a featured review</h2>
-      {/*  <img
-        style={{ height: '600px' }}
-        src={singleReview.review_img_url}
-        alt='game'
-      ></img> */}
-      <h3>
-        {singleReview.title} - {singleReview.designer}
-      </h3>
-      <p>{singleReview.owner}</p>
-      <p>{singleReview.review_body}</p> {/* Truncate body */}
-      <p>{singleReview.category}</p>
-      <p>{singleReview.votes}</p>
-    </div>
+    <main>
+      <div className='review'>
+        <img
+          id='singleReviewImg'
+          style={{ height: '600px' }}
+          src={singleReview.review_img_url}
+          alt='game'
+        ></img>
+        <Link to='/reviews/6'>
+          <h3 className='reviewTitle'>{singleReview.title}</h3>
+        </Link>
+        <h5 id='designer'>{singleReview.designer}</h5>
+
+        <Badge className='userBadge' pill bg='warning' text='dark'>
+          {singleReview.owner}
+        </Badge>
+        <p className='singleReviewBody'>{singleReview.review_body}</p>
+        <p>Category: {singleReview.category}</p>
+      </div>
+    </main>
   );
 };
 
