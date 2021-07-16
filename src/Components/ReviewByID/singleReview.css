@@ -3,6 +3,10 @@
   width: 60%;
 }
 
+.reviewTitle {
+  margin-top: 1em;
+}
+
 .commentDivider {
   border: 0;
   clear: both;
@@ -19,6 +23,7 @@
   margin-bottom: 5em;
   background-color: white;
   padding: 1.5em;
+  box-shadow: 0 8px 8px -4px lightblue;
 }
 
 .submitBtn {
@@ -39,8 +44,8 @@ span {
   color: white;
 }
 
-.createdAt {
-  font-size: 0.5em;
+.created_at {
+  font-size: 0.8em;
 }
 
 .icon:hover {
@@ -57,4 +62,9 @@ span {
 
 .userBadge {
   font-size: 1.1em;
+  margin-bottom: 3em;
+}
+
+li {
+  list-style: none;
 }

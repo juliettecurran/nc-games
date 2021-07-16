@@ -27,3 +27,15 @@ export const getComments = async (review_id) => {
   console.log(data.comments, 'COMMENTS');
   return data.comments;
 };
+
+export const patchVotes = async (id, isUpvote, voteType) => {
+  const { data } = await reviewsApi.patch(`/${voteType}/${id}`, {
+    inc_votes: isUpvote ? 1 : -1,
+  });
+};
+
+export const postComment = async (user, reviewID, body) => {
+  const { data } = await reviewsApi.post(`/reviews/${reviewID}/comments`, {
+    user: body,
+  });
+};
