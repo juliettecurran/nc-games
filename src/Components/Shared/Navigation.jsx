@@ -10,35 +10,65 @@ const Navigation = () => {
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='m-auto'>
-          <Nav.Link href='/reviews/category/all'>Reviews</Nav.Link>
-          <NavDropdown title='Categories' id='collasible-nav-dropdown'>
-            <NavDropdown.Item href='/reviews/category/dexterity'>
+          <Nav.Link className='navLink' href='/'>
+            Home
+          </Nav.Link>
+          <Nav.Link className='navLink' href='/reviews/category/all'>
+            Reviews
+          </Nav.Link>
+
+          <NavDropdown
+            className='navLink'
+            title='Categories'
+            id='collasible-nav-dropdown'
+          >
+            <NavDropdown.Item
+              className='navLink'
+              href='/reviews/category/dexterity'
+            >
               Dexterity
             </NavDropdown.Item>
 
-            <NavDropdown.Item href='/reviews/category/deck-building'>
+            <NavDropdown.Item
+              className='navLink'
+              href='/reviews/category/deck-building'
+            >
               Deck Building
             </NavDropdown.Item>
-            <NavDropdown.Item href='/reviews/category/engine-building'>
+            <NavDropdown.Item
+              className='navLink'
+              href='/reviews/category/engine-building'
+            >
               Engine Building
             </NavDropdown.Item>
 
-            <NavDropdown.Item href='/reviews/category/hidden-roles'>
+            <NavDropdown.Item
+              className='navLink'
+              href='/reviews/category/hidden-roles'
+            >
               Hidden Roles
             </NavDropdown.Item>
-            <NavDropdown.Item href='/reviews/category/strategy'>
+            <NavDropdown.Item
+              className='navLink'
+              href='/reviews/category/strategy'
+            >
               Strategy
             </NavDropdown.Item>
 
-            <NavDropdown.Item href='/reviews/category/other'>
+            <NavDropdown.Item
+              className='navLink'
+              href='/reviews/category/other'
+            >
               Other
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href='/reviews/category/all'>
+            <NavDropdown.Item className='navLink' href='/reviews/category/all'>
               All
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href='/new-review'>Submit Review</Nav.Link>
+          <Nav.Link className='navLink' href='/new-review'>
+            Submit Review
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

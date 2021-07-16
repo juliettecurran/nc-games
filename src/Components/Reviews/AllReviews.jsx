@@ -9,8 +9,6 @@ const AllReviews = () => {
   const categoryParameter = useParams();
   const [reviews, setReviews] = useState([]);
 
-  console.log(categoryParameter, 'categoryParameter here');
-
   useEffect(() => {
     getReviews(categoryParameter.category_slug).then((reviewsFromApi) => {
       setReviews(reviewsFromApi);

@@ -6,7 +6,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FormControl from 'react-bootstrap/FormControl';
 import { getComments, postComment } from '../../utils/api';
 import Expandable from '../Shared/Expandable';
 import Voter from '../Shared/Voter';
@@ -19,11 +18,9 @@ const SingleReview = () => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    console.log('in useEffect for ID: single reviews');
     return axios
       .get(`https://games-juliette.herokuapp.com/api/reviews/${review_id}`)
       .then((response) => {
-        console.log(response, '<-- singlereview response');
         setSingleReview(response.data.review);
       });
   }, [review_id]);
@@ -38,12 +35,13 @@ const SingleReview = () => {
     <main>
       <div className='review'>
         <img
+          id='singleReviewImg'
           style={{ height: '600px' }}
           src={singleReview.review_img_url}
           alt='game'
         ></img>
         <h3 className='reviewTitle'>{singleReview.title}</h3>
-        <h5>{singleReview.designer}</h5>
+        <h5 id='designer'>{singleReview.designer}</h5>
 
         <Badge className='userBadge' pill bg='warning' text='dark'>
           {singleReview.owner}
@@ -81,7 +79,7 @@ const SingleReview = () => {
           </ul>
           {comments.map((comment) => {
             return (
-              <li key={comment.comment_id}>
+              <li key={comment.comment_id} className='singleComment'>
                 <p>
                   <Badge className='userBadge' pill bg='warning' text='dark'>
                     {comment.author}

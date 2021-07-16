@@ -8,7 +8,6 @@ export const getReviews = async (category) => {
   if (category === 'all') {
     category = undefined;
   }
-  console.log(category, '<< category');
   const { data } = await reviewsApi.get('/reviews', {
     params: { category: category },
   });

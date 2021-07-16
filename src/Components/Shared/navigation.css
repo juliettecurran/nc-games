@@ -2,15 +2,28 @@ Navbar {
   font-weight: 800;
   color: black;
 }
-.navbar-dark .navbar-nav .nav-link {
+
+.customColour {
+  background-color: goldenrod;
+  color: white;
+}
+.nav-link {
+  background-color: goldenrod;
 }
 
 .nav-link:hover {
-  background-color: #dce5e5;
   color: white;
+}
+
+select.decorated option:checked {
+  box-shadow: 0 0 10px 100px #1882a8 inset;
 }
 
 .navbar-nav > li {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.navLink {
+  font-weight: 700;
 }

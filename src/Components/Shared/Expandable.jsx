@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 const Expandable = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(props);
   const toggleOpen = () => setIsOpen((currOpen) => !currOpen);
   return (
     <div>

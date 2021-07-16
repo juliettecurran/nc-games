@@ -14,7 +14,7 @@ const Voter = ({ votes, id, vote_type }) => {
   };
 
   return (
-    <Badge className='voteBadge' pill bg='primary' onClick={handleClick}>
+    <Badge className='voteBadge' pill onClick={handleClick}>
       {hasVoted ? votes + 1 : votes}
     </Badge>
   );

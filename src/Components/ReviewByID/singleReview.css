@@ -5,6 +5,15 @@
 
 .reviewTitle {
   margin-top: 1em;
+  font-weight: bold;
+}
+
+#singleReviewImg {
+  padding-top: 2em;
+}
+
+#designer {
+  font-style: italic;
 }
 
 .commentDivider {
@@ -31,7 +40,8 @@
 }
 
 .comments {
-  background-color: #dce5e5;
+  background-color: #d2e4e4;
+  border-radius: 11%;
   width: 65%;
   padding: 3em;
   margin-bottom: 1em;
@@ -39,24 +49,26 @@
 }
 
 span {
-  background-color: #0e37cc;
+  background-color: goldenrod;
   padding: 0.4em;
   color: white;
 }
 
+.singleComment {
+  margin-bottom: 2.4em;
+}
+.voteBadge:hover,
+.voteBadge:focus,
+.voteBadge:visited,
+.voteBadge:active {
+  background-color: #1882a8;
+}
 .created_at {
   font-size: 0.8em;
 }
 
 .review p {
   line-height: 2.2em;
-}
-
-.voteBadge:hover,
-.voteBadge:focus,
-.voteBadge:visited,
-.voteBadge:active {
-  background-color: red;
 }
 
 .review .userBadge {
