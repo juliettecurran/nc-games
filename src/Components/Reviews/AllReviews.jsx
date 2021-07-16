@@ -39,6 +39,7 @@ const AllReviews = () => {
                     </Card.Title>
                   </Link>
                   <Card.Text>by {review.owner}</Card.Text>
+                  {/*  if category = dexterity, background red, link to/category/dexterity */}
                   <Card.Text>Category: {review.category}</Card.Text>
 
                   <Badge className='voteBadge' pill bg='primary'>

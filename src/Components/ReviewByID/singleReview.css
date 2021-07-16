@@ -13,11 +13,23 @@
   margin-bottom: 2.4em;
 }
 
+.commentArea {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 5em;
+  background-color: white;
+  padding: 1.5em;
+}
+
+.submitBtn {
+  margin: auto;
+}
+
 .comments {
   background-color: #dce5e5;
   width: 65%;
   padding: 3em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   margin: auto;
 }
 

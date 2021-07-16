@@ -1,6 +1,7 @@
 .postReviewForm {
   margin: auto;
-  width: 50%;
+
+  width: 65%;
   background-color: #0e37cc;
   padding: 1.2em;
   margin-top: 2em;
@@ -8,6 +9,10 @@
   color: white;
   font-weight: 600;
   margin-bottom: 5em;
+}
+
+.formHeader {
+  grid-area: formHeader;
 }
 
 hr {
@@ -19,17 +24,23 @@ hr {
   height: 1px;
   margin-bottom: 2.4em;
 }
+.username {
+  grid-area: username;
+  width: 30%;
+}
 
-h3 {
-  padding-top: 0.5em;
-  font-weight: 600;
+.review {
+  grid-area: review;
+}
+
+.uploadFile {
+  grid-area: uploadFile;
+}
+
+.categories {
+  grid-area: categories;
 }
 
 .submitBtn {
-  color: white;
-  font-weight: 600;
-}
-
-.mb-3 {
-  padding-top: 1em;
+  grid-area: submitBtn;
 }

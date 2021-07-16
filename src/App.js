@@ -29,7 +29,6 @@ function App() {
             <AllReviews selectedCategory={selectedCategory} />
           </Route>
           <Route exact path='/reviews/:review_id'>
-            {/*also by category? */}
             <SingleReview />
           </Route>
           <Route exact path='/new-review'>
