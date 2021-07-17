@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
-import Expandable from '../Shared/Expandable';
 import Voter from '../Shared/Voter';
 import { getComments } from '../../utils/api';
 import { useParams } from 'react-router-dom';
+import Expandable from '../Shared/Expandable/Expandable';
 
 const CommentSection = () => {
   const { review_id } = useParams();

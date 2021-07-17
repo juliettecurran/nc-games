@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Header from './Components/Shared/Header';
-import Navigation from './Components/Shared/Navigation';
-import Footer from './Components/Shared/Footer';
+import Header from './Components/Shared/Header/Header';
+import Navigation from './Components/Shared/Navigation/Navigation';
+import Footer from './Components/Shared/Footer/Footer';
 import FeaturedReview from './Components/Featured/FeaturedReview';
 import SingleReview from './Components/ReviewByID/SingleReview';
 import CategoryList from './Components/Categories/CategoryList';
