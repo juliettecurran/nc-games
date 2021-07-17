@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getReviews } from '../../utils/api';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
+import Filter from './Filter/Filter';
 import '././allReviews.css';
 
 const AllReviews = () => {
@@ -17,7 +18,8 @@ const AllReviews = () => {
 
   return (
     <div>
-      {/* <h3>{category ? `${category} reviews` : `All reviews`}</h3> */}
+      <Filter />
+      {/*  <h3>{category ? `${category} reviews` : `All reviews`}</h3> */}
       <ul className='flex-container'>
         {reviews.map((review) => {
           return (
