@@ -7,14 +7,21 @@ import '../ReviewByID/singleReview.css';
 const FeaturedReview = () => {
   const [singleReview, setSingleReview] = useState({});
   const { review_id } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     return axios
       .get(`https://games-juliette.herokuapp.com/api/reviews/6`)
       .then((response) => {
         setSingleReview(response.data.review);
+        setIsLoading(false);
       });
   }, [review_id]);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <main>

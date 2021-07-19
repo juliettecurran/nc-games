@@ -17,55 +17,6 @@ const Navigation = () => {
             Reviews
           </Nav.Link>
 
-          <NavDropdown
-            className='navLink'
-            title='Categories'
-            id='collasible-nav-dropdown'
-          >
-            <NavDropdown.Item
-              className='navLink'
-              href='/reviews/category/dexterity'
-            >
-              Dexterity
-            </NavDropdown.Item>
-
-            <NavDropdown.Item
-              className='navLink'
-              href='/reviews/category/deck-building'
-            >
-              Deck Building
-            </NavDropdown.Item>
-            <NavDropdown.Item
-              className='navLink'
-              href='/reviews/category/engine-building'
-            >
-              Engine Building
-            </NavDropdown.Item>
-
-            <NavDropdown.Item
-              className='navLink'
-              href='/reviews/category/hidden-roles'
-            >
-              Hidden Roles
-            </NavDropdown.Item>
-            <NavDropdown.Item
-              className='navLink'
-              href='/reviews/category/strategy'
-            >
-              Strategy
-            </NavDropdown.Item>
-
-            <NavDropdown.Item
-              className='navLink'
-              href='/reviews/category/other'
-            >
-              Other
-            </NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item className='navLink' href='/reviews/category/all'>
-              All
-            </NavDropdown.Item>
-          </NavDropdown>
           <Nav.Link className='navLink' href='/new-review'>
             Submit Review
           </Nav.Link>

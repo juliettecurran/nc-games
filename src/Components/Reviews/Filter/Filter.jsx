@@ -9,7 +9,7 @@ const Filter = () => {
   return (
     <div>
       <Expandable>
-        <Navbar expand='lg' className='customColour'>
+        <Navbar expand='md' className='customColour'>
           <Nav className='m-auto'>
             <NavDropdown
               className='navLink'
@@ -71,7 +71,7 @@ const Filter = () => {
             >
               <NavDropdown.Item
                 className='navLink'
-                href='/reviews/category/dexterity'
+                href='/reviews/category/dexterity?='
               >
                 Most Recent
               </NavDropdown.Item>

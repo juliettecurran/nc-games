@@ -6,19 +6,28 @@ import Badge from 'react-bootstrap/Badge';
 import Filter from './Filter/Filter';
 import '././allReviews.css';
 
-const AllReviews = () => {
+const AllReviews = ({ sortBy, setSortBy }) => {
   const categoryParameter = useParams();
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getReviews(categoryParameter.category_slug).then((reviewsFromApi) => {
-      setReviews(reviewsFromApi);
-    });
+    setIsLoading(true);
+    getReviews(categoryParameter.category_slug, sortBy).then(
+      (reviewsFromApi) => {
+        setReviews(reviewsFromApi);
+        setIsLoading(false);
+      }
+    );
   }, [categoryParameter]);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
-      <Filter />
+      <Filter setSortBy={setSortBy} />
       {/*  <h3>{category ? `${category} reviews` : `All reviews`}</h3> */}
       <ul className='flex-container'>
         {reviews.map((review) => {

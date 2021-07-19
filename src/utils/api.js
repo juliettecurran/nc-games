@@ -4,12 +4,12 @@ const reviewsApi = axios.create({
   baseURL: 'https://games-juliette.herokuapp.com/api',
 });
 
-export const getReviews = async (category) => {
+export const getReviews = async (category, sortBy) => {
   if (category === 'all') {
     category = undefined;
   }
   const { data } = await reviewsApi.get('/reviews', {
-    params: { category: category },
+    params: { category: category, sort_by: sortBy },
   });
   return data.reviews;
 };

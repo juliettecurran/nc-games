@@ -13,6 +13,9 @@ import '././App.css';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('');
+
+  const [sortBy, setSortBy] = useState();
+
   return (
     <div className='App'>
       <BrowserRouter>
@@ -29,7 +32,11 @@ function App() {
               <CategoryList />
             </Route>
             <Route path='/reviews/category/:category_slug'>
-              <AllReviews selectedCategory={selectedCategory} />
+              <AllReviews
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                selectedCategory={selectedCategory}
+              />
             </Route>
             <Route exact path='/reviews/:review_id'>
               <SingleReview />
